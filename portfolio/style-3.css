@@ -1,0 +1,374 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html{
+    font-family: 'lato', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --tekstkleur:#333333;
+    --witte-tekst:#fff;
+    --muted-color:#f3f3f3;
+    --witruimte:1.5em;
+    --prim-color:tomato;
+    --sec-color:coral;
+    --zwart:#000;
+    --form-active:green;
+    --grijs:#111;
+}
+
+/*//////////////////*/
+/*                  */
+/*  Loading pagina  */
+/*                  */
+/*//////////////////*/
+
+body{
+    background-color: var(--zwart);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body > .inleiding{
+    margin-top: 3em;
+    color: white;
+}
+
+body > .inleiding h1{
+    font-size: max(20px, 2.75vw);
+    text-align: center;
+    margin: 0 1em;
+}
+
+body > .inleiding h2{
+    font-size: max(15px, 2vw);
+    text-align: center;
+    margin: 1em 1em 0;
+    font-style: italic;
+    color: var(--prim-color);
+}
+
+
+body > section:not(.inleiding){
+    max-height: 40em;
+    aspect-ratio: 3/4;
+    width: 80%;
+    max-width: 30em;
+    margin-bottom: 10em;
+}
+
+section.loading{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section.loading > img{
+    width:25%;
+}
+
+section.loading > section {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    aspect-ratio: 1/1;
+    
+}
+
+section.loading > section:hover{
+    animation: draaien 3s linear infinite;
+}
+
+@keyframes draaien{
+    0%{
+        transform:translateY(-50%) rotate(0deg) ;
+    }
+
+    50%{
+        transform: translateY(-50%) rotate(180deg) scale(0.75);
+    }
+
+
+    100%{
+        transform:translateY(-50%) rotate(360deg) ;
+    
+    }
+}
+
+@keyframes draaien-1{
+    0%{
+        transform: rotate(0deg) ;
+    }
+
+    50%{
+        transform: rotate(180deg);
+    }
+
+
+    100%{
+        transform: rotate(360deg) ;
+    
+    }
+}
+
+@keyframes scale{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(0.5);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+
+div{
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    background-color:var(--witte-tekst);
+
+}
+
+
+section.test{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+section.test:hover{
+    animation: draaien-1 3s linear infinite;
+}
+
+section.test div{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+section.test:hover div{
+    animation: draaien-1 3s linear infinite;
+}
+
+
+
+section.test:hover  div:first-of-type{
+    animation: scale 3s linear infinite;
+}
+
+section.test:hover div:last-of-type{
+    animation: scale 3s linear infinite;
+    animation-delay: 1.5s;
+}
+
+section.test div > div{
+    width: 50px;
+    height: 50px;
+    background-color: var(--zwart);
+}
+
+section.test div > div:first-of-type{
+    background-color: var(--witte-tekst);
+}
+
+body > section:nth-of-type(4){
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #fff;
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+
+
+body > section:nth-of-type(4) > svg{
+    fill:#fff;
+    width: 60%;
+    z-index: 2;
+}
+
+body > section:nth-of-type(4):hover svg{
+    animation: colorChange 1s linear forwards;
+    animation-delay: 5s;
+}
+
+
+body > section:nth-of-type(4) > div{
+    width: 200%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius:30% ;
+    position: absolute;
+    transform: translateY(100%);
+}
+
+body > section:nth-of-type(4):hover > div{
+    animation: flipper 5s linear forwards;
+}
+
+@keyframes flipper{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%) rotate(720deg);
+    }
+}
+
+@keyframes colorChange{
+    0%{
+        fill: #fff;
+    }
+
+    100%{
+        fill: #000;
+    }
+}
+
+
+
+body > section:nth-of-type(5){
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #fff;
+    overflow: hidden;
+    margin-bottom: 100px;
+    background-color:white ;
+}
+
+body > section:nth-of-type(5) > svg{
+    fill:none;
+    stroke-width: 5px;
+    stroke: var(--witte-tekst);
+    stroke-linejoin: round;
+    width: 60%;
+    z-index: 2;
+    overflow: visible;
+}
+
+body > section:nth-of-type(5) > div{
+    width: 200%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius:30% ;
+    position: absolute;
+    background-color: black;
+    
+}
+
+body > section:nth-of-type(5):hover div{
+    animation: flipper 5s linear forwards;
+}
+
+body > section:nth-of-type(6){
+    position: relative;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #fff;
+    overflow: hidden;
+    margin-bottom: 100px;
+    background-color:white ;
+}
+
+body > section:nth-of-type(6) > svg{
+    fill:black;
+    stroke-width: 5px;
+    stroke: var(--prim-color);
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    width: 60%;
+    z-index: 2;
+    overflow: visible;
+    stroke-dashoffset: 586;
+    stroke-dasharray: 586;
+    
+}
+
+body > section:nth-of-type(6):hover svg{
+    animation:stroke 5s forwards;
+}
+
+@keyframes stroke{
+    0%{
+        stroke-dashoffset: 586;
+        stroke-dasharray: 586;
+    }
+
+    84%{
+        stroke-dashoffset: 586;
+        stroke-dasharray: 1200;
+        stroke: var(--prim-color);
+        fill: black;
+    }
+
+    86%{
+        stroke: none;
+        fill: #fff;
+    }
+
+    100%{
+        fill: black;
+        stroke: none;
+    }
+}
+
+
+body > section:last-of-type{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    height: 100px;
+}
+section:last-of-type > section{
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    justify-content: center;
+}
+
+section:last-of-type > img{
+    width: 30%;
+}
+
+h2{
+    font-size: max(15px, 2vw);
+    color: white;
+}
+
+a{
+    color:tomato;
+    padding: .5em 1em;
+    font-size: max(12px, 1.5vw) ;
+    border:2px solid tomato;
+    text-decoration: none;
+}
