@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>gemeenteraad</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gemeenteraad" stroke-width="0.3" stroke="#18933C" fill-rule="nonzero" fill="#18933C">
+            <g id="noun_143672_cc">
+                <g id="Group">
+                    <path d="M30.9777778,28.6085714 L1.02222222,28.6085714 L1.02222222,15.3228571 L30.9333333,15.3228571 L30.9333333,28.6085714 L30.9777778,28.6085714 Z M2.48888889,27.1914286 L29.5111111,27.1914286 L29.5111111,16.74 L2.48888889,16.74 L2.48888889,27.1914286 Z" id="Shape"></path>
+                    <g transform="translate(0.888889, 11.957143)" id="Shape">
+                        <polygon points="1.6 4.78285714 0.133333333 4.78285714 0.133333333 0.132857143 10.8 0.132857143 10.8 1.55 1.6 1.55"></polygon>
+                        <polygon points="30.0888889 4.78285714 28.6222222 4.78285714 28.6222222 1.55 19.4222222 1.55 19.4222222 0.132857143 30.0888889 0.132857143"></polygon>
+                    </g>
+                    <rect id="Rectangle-path" x="0.311111111" y="29.3171429" width="31.3777778" height="1.41714286"></rect>
+                    <g transform="translate(4.888889, 15.500000)" id="Rectangle-path">
+                        <rect x="16.5777778" y="0.177142857" width="1.42222222" height="12.5771429"></rect>
+                        <rect x="12.4444444" y="0.177142857" width="1.42222222" height="12.5771429"></rect>
+                        <rect x="8.35555556" y="0.177142857" width="1.42222222" height="12.5771429"></rect>
+                        <rect x="4.22222222" y="0.177142857" width="1.42222222" height="12.5771429"></rect>
+                        <rect x="0.133333333" y="0.177142857" width="1.42222222" height="12.5771429"></rect>
+                        <rect x="20.6666667" y="0.531428571" width="1.42222222" height="12.5771429"></rect>
+                    </g>
+                    <rect id="Rectangle-path" x="15.2888889" y="0.575714286" width="1.42222222" height="8.28142857"></rect>
+                    <path d="M23.2,5.27 L15.2888889,5.27 L15.2888889,0.221428571 L23.2,0.221428571 L23.2,5.27 Z M16.7111111,3.80857143 L21.7777778,3.80857143 L21.7777778,1.63857143 L16.7111111,1.63857143 L16.7111111,3.80857143 Z" id="Shape"></path>
+                    <polygon id="Shape" points="23.6444444 16.5628571 16 9.74285714 8.35555556 16.5628571 7.37777778 15.5 16 7.79428571 24.6222222 15.5"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

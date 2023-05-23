@@ -1,0 +1,7 @@
+.logo--afs {
+  width: 70% !important;
+}
+
+.logo--afs.hover {
+  width: 80% !important;
+}

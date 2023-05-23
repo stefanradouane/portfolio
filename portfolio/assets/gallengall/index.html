@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gall en gall</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.cdnfonts.com/css/dinpro" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/lpg0ogw.css">
+</head>
+
+<body>
+    <!-- Volledige header -->
+    <header class="header">
+        <!-- Volledige Navigatie -->
+        <nav class="head">
+            <!-- Bovenste Rij navigatie -->
+            <section>
+                <!-- hamburger menu -->
+                <a class="hamburger" href="#"><img src="./img/menu.png" alt="menu knopje"></a>
+                <!-- logo gall & gall mobiel -->
+                <a href="#"><img src="./img/logo.svg" alt="logo van gall en gall"></a>
+                <!-- Sectie 3 iconen -->
+                <section>
+                    <!-- icon hartje + aantal -->
+                    <section>
+                        <svg title="Flessen die je geliked hebt." viewBox="0 0 24 24" class="hart">
+                            <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0
+                              C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                              c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+                        </svg>
+                        <p class="hartenwaarde">0</p>
+                    </section>
+                    <!-- icon user -->
+                    <img src="./img/user.png" alt="mijn profiel">
+                    <!-- icon winkelwagen + aantal -->
+                    <section>
+                        <a href="#"><img src="./img/shop.png" alt="winkelmandje"></a>
+                        <p class="winkelwagen">0</p>
+                    </section>
+                </section>
+            </section>
+            <!-- Zoekveld navigatie -->
+            <form>
+                <!-- zoekveld -->
+                <input type="text" placeholder="Waar ben je naar op zoek?">
+                <!-- vergrootglas in het zoekveld -->
+                <button type="submit"><img src="./img/search.png" alt="Zoek"></button>
+            </form>
+        </nav>
+    </header>
+    <!-- Main alle content van de pagina -->
+    <main>
+        <!-- Sectie 1 banner -->
+        <section>
+            <a href="#"><img src="./img/Banner.jpeg"
+                    alt="Gouden deals, tot wel 25% korting Op=Op klik om alle acties te bekijken"></a>
+        </section>
+        <!-- Sectie 2 Lijst met linkjes -> Meer button -->
+        <section class="linkjes">
+            <nav class="linkjes klein">
+                <ul>
+                    <li><a class="link active" href="#">Acties</a></li>
+                    <li><a class="link" href="#">Wijn</a></li>
+                    <li><a class="link" href="#">Mousserend</a></li>
+                    <li><a class="link" href="#">Whisky</a></li>
+                    <li><a class="link" href="#">Wodka, rum, gin, vermouth, tequila</a></li>
+                    <li><a class="link" href="#">Likeuren</a></li>
+                    <li><a class="link" href="#">Bier</a></li>
+                    <li><a class="link" href="#">Jenever, bitter en vieux</a></li>
+                    <li><a class="link" href="#">Port, sherry</a></li>
+                    <li><a class="link" href="#">Cignac</a></li>
+                    <li><a class="link" href="#">Alcohol vrij</a></li>
+                    <li><a class="link" href="#">Cadeau</a></li>
+                </ul>
+            </nav>
+            <a class="meer" href="#">Meer</a>
+        </section>
+        <!-- Sectie 3 Reclame -->
+        <section>
+            <a href="#"><img src="./img/Specialdeal.jpeg"
+                    alt="Speciale deal voor kaarthouders 6 flessen wijn voor maar €7,99 dat is ruim 15 euro korting per doos. Klik  om de dozendeals te bekijken."></a>
+        </section>
+        <!-- Sectie 4 Reclame -->
+        <section>
+            <a href="#"><img src="./img/bordeaudeal.jpeg" alt="Bekijk de reclame op de bordeaux markt"></a>
+        </section>
+        <!-- Sectie 5 drop-down -->
+        <section class="drop-down">
+            <select class="select" id="list" name="drop-down">
+                <option value="acties">Acties</option>
+                <option value="prijs">Prijswinnend</option>
+                <option value="nieuw">Nieuw</option>
+            </select>
+        </section>
+        <!-- Sectie 6 shop -->
+        <section class="shop">
+            <!-- Product 1 -->
+            <section class="product">
+                <!-- Titel + hartje -->
+                <section class="top">
+                    <h3>Champagne</h3>
+                    <svg tabindex="0" title="Flessen die je geliked hebt." viewBox="0 0 24 24" class="switch pulse">
+                        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0
+                          C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                          c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+                    </svg>
+                </section>
+                <!-- Foto fles -->
+                <a href="pommery.html">
+                    <figure>
+                        <img class="prod" src="./img/champi.png" alt="">
+                    </figure>
+                </a>
+                <!-- Prijs + aanbieding -->
+                <section class="flex">
+                    <section class="first">
+                        <p>26.</p>
+                        <p>65</p>
+                    </section>
+                    <section>
+                        <h6>Kaart <br> houder</h6>
+                        <section class="second">
+                            <p>19.</p>
+                            <p>99</p>
+                        </section>
+                    </section>
+                </section>
+                <!-- Naam fles -->
+                <section>
+                    <h4 class="titel">Pommery Brut Noir 75CL</h4>
+                </section>
+                <!-- Button fles toevoegen -->
+                <button class="flesknop">
+                    <p>Fles</p>
+                    <img class="icon-button" src="./img/plus.png" alt="">
+                </button>
+            </section>
+            <section class="product">
+                <section class="top">
+                    <h3>Wodka</h3>
+                    <svg tabindex="0" title="Geef deze fles een like" viewBox="0 0 24 24" class="switch pulse">
+                        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0
+                      C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+                      c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+                    </svg>
+                </section>
+                <!-- figure binnen a -->
+                <a href="#">
+                    <figure>
+                        <img class="prod" src="./img/vodak.png" alt="">
+                    </figure>
+                </a>
+                <section class="flex">
+                    <section class="first">
+                        <p>19.</p>
+                        <p>99</p>
+                    </section>
+                </section>
+                <section>
+                    <h4 class="titel">Smirnoff 100CL</h4>
+                </section>
+                <button class="flesknop">
+                    <!-- beter span of strong -->
+                    <p>Fles</p>
+                    <img class="icon-button" src="./img/plus.png" alt="">
+                </button>
+            </section>
+        </section>
+        <!-- Sectie 7 bekijk alle acties -->
+        <section class="stretch">
+            <button>
+                <p>Bekijk alle acties</p>
+                <img class="icon-button arrow-left" src="./img/arrow.svg" alt="">
+            </button>
+        </section>
+        <!-- Sectie 8 Aanmelden voor nieuwsbrief -->
+        <section class="nieuwsbriefmeld">
+            <h3>Nieuwsbrief</h3>
+            <p>Meld je nu aan</p>
+            <!-- Email invul sectie -->
+            <form class="nieuw">
+                <input class="nieuwsbrief" type="text" placeholder="Vul je emailadres in">
+                <button class="nieuws">
+                    <img class="icon-nieuws arrow-left" src="./img/arrow.svg" alt="">
+                </button>
+            </form>
+            <p>Dit formulier is beschermd met reCaptcha, het Google <a href="#">privicybeleid</a> en <a href="#">service
+                    voorwaarden</a> zijn van toepassing</p>
+        </section>
+    </main>
+    <footer>
+        <h2>Neem contact op</h2>
+        <p><a href="#">Chat met ons</a> of <a href="#">Feedback geven</a></p>
+        <section>
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="#">Wijn</a></li>
+                <li><a href="#">Mousserend</a></li>
+                <li><a href="#">Whisky</a></li>
+                <li><a href="#">Mixen</a></li>
+                <li><a href="#">Likeuren</a></li>
+                <li><a href="#">Jenever, Bitter & Vieux</a></li>
+                <li><a href="#">Cognac</a></li>
+                <li><a href="#">Port en sherry</a></li>
+                <li><a href="#">Bier</a></li>
+                <li><a href="#">Alcoholvrij</a></li>
+                <li><a href="#">Acties</a></li>
+                <li><a href="#">Kelderrestante</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Ontdek</h3>
+            <ul>
+                <li><a href="#">Cocktails & sterk</a></li>
+                <li><a href="#">Whisky & mousserend</a></li>
+                <li><a href="#">Whisky</a></li>
+                <li><a href="#">Recepten</a></li>
+                <li><a href="#">Smaakprofiel</a></li>
+                <li><a href="#">Uitgelichte merken</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Service</h3>
+            <ul>
+                <li><a href="#">Veelgestelde vragen</a></li>
+                <li><a href="#">Online drank bestellen</a></li>
+                <li><a href="#">Zakelijk</a></li>
+                <li><a href="#">Winkels</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Mijn account</a></li>
+                <li><a href="#">Folder</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Gall & gall</h3>
+            <ul>
+                <li><a href="#">Over Gall & Gall</a></li>
+                <li><a href="#">Vactures</a></li>
+                <li><a href="#">Club Gall & Gall</a></li>
+                <li><a href="#">Klantenkaart</a></li>
+                <li><a href="#">Kwetsbaarheid melden</a></li>
+                <li><a href="#">Verantwoord alcoholgebruik</a></li>
+            </ul>
+        </section>
+    </footer>
+    <blockquote>Gemaakt door Stefan Radouane | 2021/2022 | FED</blockquote>
+    <section class="opvulling">
+    </section>
+    <section class="pop-over low">
+        <img tabindex="0" role="button" class="pijltje omhoog" src="./img/arrow.svg" alt="">
+        <h2>Check onze nieuwe Feature</h2>
+        <section>
+            <h3>Heb jij het nieuwe Gall&Gall thema lied al gehoord?</h3>
+            <img class="start" src="./img/start.svg" alt="start">
+            <img class="pauze invisible" src="./img/pauze.svg" alt="pauze">
+        </section>
+        <section>
+            <h3>Liever drinken in de avond?</h3>
+            <p>Geen probleem...</p>
+            <input class="mode" type="checkbox">
+        </section>
+    </section>
+    <section class="mobile hidden">
+        <section>
+            <h2>Menu</h2>
+            <a>&cross;</a>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Assortiment</a>
+                </li>
+                <li>
+                    <a href="#">Ontdek</a>
+                </li>
+                <li>
+                    <a href="#">Acties</a>
+                </li>
+                <li>
+                    <a href="#">Winkelmand</a>
+                </li>
+                <li>
+                    <a href="#">Winkels</a>
+                </li>
+                <li>
+                    <a href="#">Folders</a>
+                </li>
+                <li>
+                    <a href="#">Klantenkaart</a>
+                </li>
+                <li>
+                    <a href="#">Smakenprofiel</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Veelgestelde vragen</a>
+                </li>
+                <li>
+                    <a href="#">Gall & Gall</a>
+                </li>
+            </ul>
+        </nav>
+        <p class="accept invisible">je kan me niet zien</p>
+    </section>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>

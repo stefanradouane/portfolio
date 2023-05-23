@@ -1,0 +1,16 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  /* margin: 0 5px; */
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--sec-color);
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  /* cursor: pointer; */
+}

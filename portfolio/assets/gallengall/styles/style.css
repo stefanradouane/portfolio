@@ -1,0 +1,1246 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: 'DINPro', sans-serif;
+    list-style: none;
+    max-width:375px;
+}
+
+
+
+
+:root:not(.darkMode){
+    --prim-color:#f47920;
+    --muted-prim-color:rgba(244, 121, 32, 0.8);
+    --linear-color:linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(244,121,32,1) 100%);
+    --hover-color:#f39802;
+    --sec-color:#393537;
+    --muted-text:#818181;
+    --tekst-kleur:#393537;
+    --witte-kleur:#fff;
+    --wit-ruimte:1em;
+   
+    }
+
+
+:root{
+    --prim-color:#f47920;
+    --hover-color:#f39802;
+    --sec-color:#979797;
+    --muted-text:#818181;
+    --tekst-kleur:#f2f2f2;
+    --witte-kleur:#333;
+    --wit-ruimte:1em; 
+    --button-tekst:#fff;
+}
+
+html{
+    -webkit-font-smoothing: antialiased;
+}
+
+body{
+    background-color: var(--witte-kleur);
+    max-width: 375px;
+}
+
+h1,h2,h3,h4,h5,h6,p, a{
+    color:var(--tekst-kleur);
+}
+
+footer > h2 + h3{
+    color:var(--button-tekst);
+}
+
+button p{
+    color:var(--button-tekst);
+}
+
+path{
+    pointer-events: none;
+}
+
+button{
+    height:40px;
+    text-transform: uppercase;
+    border-radius:0;
+    background-color:var(--prim-color);
+    color: var(--witte-kleur);
+    border:0;
+}
+
+/* button */
+button{
+    transition:50ms;
+}
+
+button:active{
+    transform: scale(97.5%);
+    border: 3px solid var(--prim-color);
+    box-shadow: 0 0 5px #000;
+    
+}
+
+button:hover{
+    background-color: var(--hover-color);
+}
+
+
+
+/* a.link states */
+
+a.link:hover{
+    background-color: var(--hover-color);
+    color: var(--witte-kleur);
+}
+
+a.active:hover,a.active:active{
+    border:1px solid #000;
+    color: var(--witte-kleur) !important;
+}
+
+a.link:active{
+    transform: scale(97.5%);
+    border: 3px solid in;
+    box-shadow: 0 0 5px #000;
+    color: white;
+}
+
+
+/*/*/ /* Navigatie / Header */ /*/*/
+
+/* Volledige header */
+body > header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--witte-kleur);
+    padding: var(--wit-ruimte) 0;
+    
+}
+
+/* Volledige Navigatie */
+body > header > nav{
+    display: grid;
+    grid-template-rows: auto 44px;
+} 
+/* Bovenste rij navigatie */
+body > header > nav > section{
+    display: grid;
+    grid-template-columns: 68px 1fr 1fr;
+    margin-bottom:var(--wit-ruimte);
+}
+
+/* Bovenste rij navigatie -> linker sectie */
+body > header > nav > section > section{
+    display: flex;
+    justify-content:flex-end;
+    gap:1em;
+}
+
+/* Hamburger menu */
+body > header > nav > section > a:first-of-type{
+    margin:0 1em;
+}
+
+/* Alle iconen bovenste rij */
+body > header > nav > section img{
+    height: 24px;
+    width: 24px;
+}
+
+/* Logo gall en gall */
+body > header > nav > section > a:nth-of-type(2) > img{
+    width: auto;
+}
+
+/* Complete zoekveld navigatie */
+nav.head form{
+    position: relative;
+    margin:0 1em;
+}
+
+/* Zoekveld navigatie */
+body header nav form input{
+    height: 36px;
+    width: 100%;
+    min-height: auto;
+    padding: 8px 35px 8px 8px;
+    border-radius: 18px;
+}
+
+/* Vergrootglas in het zoekveld */
+body header nav form button{
+    position: absolute;
+    right:10px;
+    border: 0;
+    background-color: transparent;
+}
+
+/* Foto vergrootglas */
+body header nav form button img{
+    width: 18px;
+    height: 18px;
+}
+
+/* icon hartje + aantal */
+body header nav section section > section{
+    position: relative;
+    width: 20px;
+}
+
+/* icon winkelwagen + aantal */
+body header nav section section > section:nth-of-type(2){
+    position: relative;
+    width: 20px;
+    margin-right:2em;
+}
+
+/* aantal van hartje en winkelwagen */
+body header nav section section section p{
+    position: absolute;
+    min-width: 1.25em;
+    padding:0 .25em;
+    background-color:var(--prim-color);
+    border-radius: .625em;
+    text-align: center;
+    font-size:.75em;
+    color: white;
+    line-height: 1.25em;
+    display: none;
+}
+
+/* aantal van hartje */
+body header nav section section section:nth-of-type(1) p{
+    top:-.5em;
+    right: -1em;
+}
+
+/* aantal van winkelwagen */
+body header nav section section section:nth-of-type(2) p{
+    top:-.5em;
+    right: -1em;
+}
+
+/* class die wordt toegevoegd door JavaScript om het aantal zihtbaar te maken */
+nav.head section section section p.positive{
+    display: block;
+}
+
+/* foto's reclame */
+main > section:first-of-type img{
+    max-width: 100%;
+    padding:0 1em;
+}
+
+/* Linkjes lijst complete menu */
+body > main > section:nth-of-type(2) > nav{
+    position: relative;
+    max-height: 30em;
+    transition: all .5s;
+}
+
+/* Styling lijst klein */
+body > main > section:nth-of-type(2) > nav.klein{
+    max-height:5em;
+    overflow: hidden;
+}
+
+/* Styling lijst achtergrond */
+nav.klein::before{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+
+/* Knop om meer te laten zien */
+body > main > section:nth-of-type(2) > a{
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    width:100vw;
+    color:var(--tekst-kleur);
+    text-align: center;
+    padding:1em 0;
+}
+
+
+/* Styling van de lijst */
+body > main > section:nth-of-type(2) > nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 6px;
+    list-style: none;
+    flex-direction: row;
+}
+
+/* Styling van de losse list-items */
+body > main > section:nth-of-type(2) > nav ul li{
+    display: flex;
+    flex-basis: 50%;
+    max-width: 50%;
+    padding:.5em 0;
+    padding-left:6px;
+    padding-right:6px;
+    
+}
+
+/* Styling van de linkjes in de list-items */
+body > main > section:nth-of-type(2) > nav ul li a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color:var(--tekst-kleur);
+    height:50px;
+    text-transform: uppercase;
+    border:1px solid var(--tekst-kleur);
+    font-size:12px;
+    text-align:center;
+    line-height:1;
+    transition: 500ms;
+}
+
+/* Styling van de eerste link */
+body > main > section:nth-of-type(2) > nav ul li a.active{
+    color: var(--prim-color);
+    border-color: var(--prim-color);
+}
+
+/* Styling van de reclame */
+body > main > section:nth-of-type(3) > a > img{
+    width: 100%;
+    padding:0 12px;
+    margin:.5em 0;
+}
+
+/* Styling van de reclame */
+body > main > section:nth-of-type(4) > a > img{
+    width: 100%;
+    padding:0 12px;
+    margin:.5em 0;
+}
+
+/* Drop-down selector sectie */
+body > main > section:nth-of-type(5){
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+/* Drop-down selector styling */
+select{
+    height:50px;
+    text-transform: uppercase;
+    padding:10px 60px 10px 15px;
+    width:100%;
+    margin: .5em 12px 2em 12px;
+    border-radius:0;
+    border:2px solid var(--sec-color);
+}
+
+
+/* Foto van de fles */
+figure {
+    display: flex;
+    justify-content: center;
+}
+
+/* Complete shop */
+/* Uitleg aankomende classes. Ik heb deze classes gebruikt, omdat deze elementen dezelfde styling hebben als op de andere pagina. Dit zorgt ervoor dat ik niet 100 regels hoefde te schrijven met allemaal pseudo selectoren. Dit houdt het CSS bestand netter.*/
+
+/* Complete sectie producten */
+.shop{
+    display: flex;
+    margin:10px 6px 40px 6px;
+}
+
+/* Sectie product kaart*/
+.product{
+    width: 50%;
+    margin-left:6px;
+    margin-right:6px;
+}
+
+/* Titel + hartje */
+.top{
+    display: flex;
+    justify-content: space-between;
+    margin:0 6px 10px 0;
+}
+
+/* foto in de figure */
+.prod{
+    height: 160px;
+}
+
+/* Prijzen */
+.product section.flex{
+    align-items: flex-start;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
+}
+
+/*  Huidige prijs sectie */
+.product section:nth-of-type(2) section:first-of-type{
+    width: 30%;
+    font-size: 32px;
+    display: flex;
+    position: relative;
+}
+
+/* Huidige prijs */
+.first p:nth-of-type(2){
+    font-size:16px;
+    position: absolute;
+    right: -5px;
+    top: 5px;
+}
+
+/* kaart houder */
+.product section:nth-of-type(2) section:nth-of-type(2){
+    width: 10em;
+    max-width: 180px;
+    width: 35%;
+    padding:5px;
+    background-color:var(--tekst-kleur);
+    position: absolute;
+    right:0;
+    top:-160px;
+}
+
+/* Kaart houder tekst */
+.product section:nth-of-type(2) section:nth-of-type(2) h6{
+    border-bottom:3px solid var(--witte-kleur);
+    color: var(--witte-kleur);
+    font-size: 13px;
+    line-height: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Prijs sectie kaarthouder */
+.product section:nth-of-type(2) section:nth-of-type(2) section{
+    font-size: 24px;
+    display: flex;
+    position: relative;
+}
+
+/* Prijs kaarthouder */
+.product section:nth-of-type(2) section:nth-of-type(2) section p{
+    color:var(--prim-color);
+}
+
+/* Kleine decimalen prijs */
+.second p:nth-of-type(2){
+    font-size:12px;
+    position: absolute;
+    right: -28px;
+    top: 4px;
+    
+}
+
+/* Naam van de fles */
+h4.titel{
+    font-size:14px;
+    font-weight: 400;
+    height: 3.9em;
+}
+
+
+/* Button om fles toe te voegen */
+.flesknop{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--prim-color);
+    color:var(--witte-kleur);
+    padding:0 3em;
+    height:40px;
+    border: 0 ;
+}
+
+/* Tekst in deze button */
+.flesknop p{
+    font-size: 16px;
+    margin:auto;
+}
+
+/* Tekst op buttons */
+button p{
+    color:var(--button-tekst);
+}
+
+/* icons op buttons */
+.icon-button{
+    position: absolute;
+    right:10px;
+    height:10px;
+    width:10px;
+}
+
+/* Bekijk alle acties sectie */
+main > section:nth-of-type(7){
+    border-top: 1px solid #000;
+    border-bottom:3px dotted #333;
+    padding:10px 12px 5em 12px;
+}
+
+/* Bekijk alle acties button */
+main > section:nth-of-type(7) button{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding:0 3em;
+    height:40px;
+}
+
+/* Tekst op de button */
+main > section:nth-of-type(7) button p{
+    margin:auto;
+    font-size:16;
+}
+
+/* Pijl die naar links wijst */
+/* Wordt op meerdere pagina's gebruikt */
+.arrow-left{
+    transform: rotate(180deg);
+}
+
+/* Aanmeld sectie voor nieuwsbrief */
+/* Sectie word op meerdere pagina's gebruikt */
+.nieuwsbriefmeld{
+    padding:12px;
+    display: block !important;
+}
+
+/* Titel nieuwsbrief */
+.nieuwsbriefmeld h3{
+    text-transform: uppercase;
+    font-family: 'rama-gothic-e', sans-serif;
+}
+
+/* meld je aan tekst */
+.nieuwsbriefmeld p:first-of-type{
+    margin-bottom:15px;
+
+}
+/* disclaimer */
+.nieuwsbriefmeld p:last-of-type{
+    font-size:13px;
+    margin-top:10px;
+    color: var(--muted-text);
+    font-weight:300;
+}
+
+/* linkjes in de disclaimer */
+.nieuwsbriefmeld p:last-of-type a{
+    color: var(--muted-text);
+}
+
+/* Email invul formulier */
+.nieuw{
+    position: relative;
+}
+
+/* Invul veld eamil */
+.nieuwsbrief{
+    width: 100%;
+    height: 40px;
+    padding:10px 60px 10px 15px;
+    border-radius: 0;
+    border: 1px solid var(--muted-text);
+    outline:none;
+    font-size:1rem;
+    color: var(--muted-text);
+}
+
+/* Verzendknop */
+.nieuws{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* icon pijl naar links */
+.icon-nieuws{
+    height:10px;
+    width:10px;
+}
+
+/* footer */
+footer{
+    background-color: var(--sec-color);
+    color:var(--witte-kleur);
+    padding: 1em;
+    margin: 1em 0 0 0;
+}
+
+/* h2 & h3 stijlen in de footer */
+footer h2,footer h3{
+    text-transform: uppercase;
+    font-family: 'rama-gothic-e',sans-serif;
+    color: var(--witte-kleur);
+}
+
+/* Eerst zin in de footer */
+footer p{
+    font-size: 13px;
+    color: var(--witte-kleur);
+}
+
+/* Linkjes in de eerste zin van de footer */
+footer p a{
+    color: var(--witte-kleur);
+}
+
+/* Lijsten */
+footer section{
+    padding: 1em 0 2em 0;
+}
+
+/* Eerst lijst naast elkaar plaatsen */
+footer section:first-of-type ul{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows: auto;
+}
+
+/* Linkjes uit de footer */
+footer section ul li a{
+    text-decoration: none;
+    color: var(--witte-kleur);
+    font-size: 13px;
+    font-weight:300;
+}
+
+
+
+
+/* Schuifbare navigatie */
+
+/* Complete sectie */
+section.mobile{
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--witte-kleur);
+    max-width: 320px;
+    width:calc(100vw - 1.3em);
+    padding:1.5em 2em 1em 3.5em;
+    bottom:0;
+    transition: .5s;
+    box-shadow: 30px 0 100px #000;
+}
+
+/* Bovenste sectie -> wegklikken */
+.mobile section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:1em;
+    text-transform: uppercase;
+    color:var(--prim-color);
+    cursor: pointer;
+}
+
+/* Linkjes in de nav */
+.mobile section > a{
+    font-size:2em;
+    
+}
+
+/* List-items in de navigatie */
+.mobile li{
+    padding-bottom:1em;
+}
+
+/* Twee kolommen visualiseren */
+.mobile li:nth-of-type(4){
+    padding-bottom:2em;
+}
+
+/* Kleur van de linkjes */
+.mobile a{
+    text-decoration: none;
+    color: var(--sec-color);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+/* Menu ontzichtbaar */
+.hidden{
+    transform:translateX(-200%);
+}
+
+/* Menu zichtbaar */
+.zichtbaar{
+    transform:translateX(0%);
+}
+
+/* algemene styling svg */
+svg {
+    overflow: visible;
+    fill: transparent;
+    stroke: var(--sec-color);
+    stroke-linejoin: round;
+    stroke-width: 2;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* Product pagina */
+/* <body class="productpagina"> */
+
+/* h1 titel */
+body.productpagina h1{
+    margin:0 0 0 16px;
+    width: 267px;
+    color: var(--tekst-kleur);
+    border-bottom: 6px solid var(--tekst-kleur);
+    font-family: 'rama-gothic-e', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+/*/*/ /* Product */ /*/*/ 
+
+/* Lay-out producy sectie */
+body.productpagina main > section:first-of-type{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+
+    margin: 1em;
+    padding: 2em 0;
+    border-bottom: 2px solid var(--tekst-kleur);
+}
+
+body.productpagina main > section:first-of-type > section{
+    flex-basis: 50%;
+    max-width: 50%;
+
+}
+
+/* Prijs sectie */
+body.productpagina main > section:first-of-type > section:first-of-type > section:first-of-type{
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+/* Prijs sectie | oude en nieuw prijs veranderen */
+body.productpagina main > section:first-of-type section:first-of-type > section:first-of-type > section:first-of-type{
+    display: flex;
+    flex-direction: row;
+    order: 1;
+    
+}
+
+/* Prijs sectie | nieuw prijs grootte & kleur */
+body.productpagina main > section:first-of-type section:first-of-type > section:first-of-type > section:first-of-type > h2{
+    font-size: 55px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+
+    color: var(--prim-color);
+    
+    margin-bottom:.5em;
+}
+
+/* Prijs sectie | nieuw prijs centen grootte & positie */
+body.productpagina main > section:first-of-type section:first-of-type > section:first-of-type > section:first-of-type > h2:nth-of-type(2){
+    font-size: 22px;
+    transform: translateX(-0.6em) translateY(0.395em);
+}
+
+/* Prijs sectie | oude prijs */
+body.productpagina main > section:first-of-type section:first-of-type > section:first-of-type > section:nth-of-type(2){
+    display: flex;
+}
+
+/* Prijs sectie | oude prijs */
+body.productpagina main > section:first-of-type section:first-of-type > section:first-of-type > section:nth-of-type(2) > p{
+    align-self: flex-start;
+    position: relative;
+    font-size: 18px;
+}
+
+body.productpagina main > section:first-of-type section:first-of-type > section:first-of-type > section:nth-of-type(2) > p::before{
+    content: "";
+    position: absolute;
+    top: 0.65em;
+    left: -0.1em;
+    right: -0.1em;
+    
+    border-top: 2px solid var(--tekst-kleur);
+    
+    transform: rotate(-13deg);
+}
+/* Button sectie */
+body.productpagina main > section:first-of-type > section:first-of-type > section:nth-of-type(2){
+    display: grid;
+    grid-gap: 0.5em;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* Button | eigen button styling */
+body.productpagina main > section:first-of-type > section:first-of-type > section:nth-of-type(2) button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px;
+}
+
+
+/* mijn favorieten knop */
+body.productpagina main > section:first-of-type > section:first-of-type > section:nth-of-type(3){
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    margin:1em 0 0 0;
+}
+
+
+/* korting sticker */
+body.productpagina main > section:first-of-type > section:nth-of-type(2){
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+body.productpagina main > section:first-of-type > section:nth-of-type(2) > section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    background-color: var(--prim-color);
+
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+}
+
+body.productpagina main > section:first-of-type > section:nth-of-type(2) > section > p{
+    color: var(--witte-kleur);
+}
+
+body.productpagina main > section:first-of-type > section:nth-of-type(2) > section > p:nth-of-type(2){
+    position: relative;
+    top: -3px;
+    font-size:16px ;
+}
+
+body.productpagina main > section:first-of-type img{
+    max-height: 50vh;
+
+}
+
+/*/*/ /* Vinkjes */ /*/*/
+body.productpagina main > section:nth-of-type(2){
+    margin:1em;
+
+}
+
+body.productpagina main > section:nth-of-type(2) ul li{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    margin:0 0 1em;
+    color: var(--tekst-kleur);
+}
+
+body.productpagina main > section:nth-of-type(2) ul li svg{
+    width: 12px;
+    height:12px;
+    margin: 0 1em 0 0;
+    fill: var(--tekst-kleur);
+    stroke: none;
+}
+
+/*/*/ /* Product info */ /*/*/
+
+/* Completer sectie */
+body.productpagina main > section:nth-of-type(3){
+    margin:1em;
+}
+
+/* Tekst product beschrijving styling */
+body.productpagina main > section:nth-of-type(3) > article > p{
+    margin-top:2em;
+    padding-bottom:2em;
+    font-size: 15px;
+    font-weight: 300;
+    border-bottom:2px dotted var(--tekst-kleur);
+}
+
+/* Sterren + aantal reviews */
+body.productpagina main > section:nth-of-type(3) > article > section{
+    /* Tekst en sterren aan onderkant uitlijnen */
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Styling "5 reviews" */
+body.productpagina main > section:nth-of-type(3) > article > section > h3{
+    font-size: 13px;
+    margin-left:4px;
+}
+
+/* Styling sterren iconen */
+body.productpagina main > section:nth-of-type(3) svg{
+    height:20px;
+    width:20px;
+    stroke: none;
+    
+}
+
+/* Kleur review sterren */
+body.productpagina main > section:nth-of-type(3) svg path{
+    fill: var(--prim-color);
+}
+
+/* Laatste review ster niet volledig ingekleurd */
+body.productpagina main > section:nth-of-type(3) svg:last-of-type path{
+    opacity: .3;
+}
+
+
+/*Prodcut info descripted list*/
+body.productpagina main > section:nth-of-type(3) > section:first-of-type{
+    margin: 2em 0 4em 0 ;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:first-of-type > dl{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5em 1em;
+    color: var(--tekst-kleur);
+}
+
+body.productpagina main > section:nth-of-type(3) > section:first-of-type > dl a{
+    color: var(--prim-color);
+    text-decoration: none;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details{
+    border-bottom:1px solid var(--sec-color);
+    padding: .5em 0;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details > summary{
+    text-transform: uppercase;
+    padding:.5em 0;
+    margin:0 0 0 2em;
+    color: var(--tekst-kleur);
+    
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:first-of-type{
+    border-top:1px solid var(--sec-color);
+    color: var(--tekst-kleur);
+}
+
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details dt{
+    margin: 0 0 0.2em 0;
+}
+
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:first-of-type dd{
+    font-weight: 300;
+    margin: 0 0 0.7em 0;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:first-of-type dl{
+    padding: 0 0 1.2em 0;
+    border-bottom: 1px dotted var(--sec-color);
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(2) section{
+    position: relative;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(2) section img:first-of-type{
+    width: 100%;
+
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(2) section img:nth-of-type(2){
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin: -18px 0 0 -18px;
+    animation: bounce 2s alternate infinite;
+
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) > section:first-of-type{
+    display: flex;
+    gap: 1em;
+    align-items: flex-end;
+}
+
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) h4{
+    margin:0;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) > section:first-of-type{
+    margin:0 0 1em 0;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) > section:nth-of-type(2){
+    padding:0 0 1em 0;
+    border-bottom: 0 ;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) > section:nth-of-type(2) select.select{
+    margin:0.5em 0 1em 0;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) > section:nth-of-type(3) > section{
+    padding:1em 0;
+    margin:0;
+    border-bottom:2px dotted var(--sec-color);
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) > section:nth-of-type(3) > section:last-of-type{
+    padding:2em 0 1.5em 0;
+    margin:0;
+    border-bottom:0;
+}
+
+body.productpagina main > section:nth-of-type(3) > section:nth-of-type(2) > details:nth-of-type(3) > section:nth-of-type(3) > section:last-of-type a{
+    padding:10px 15px 9px;
+    text-align: center;
+    background-color: var(--sec-color);
+    color: var(--witte-kleur);
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+/*/*/ /* anderen kochten ook begin */ /*/*/
+body.productpagina main > section:nth-of-type(4){
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-gap: 10px;
+    margin: 10px 6px 40px 6px;
+}
+
+body.productpagina main > section:nth-of-type(4) > section{
+    margin: 0 6px;
+}
+
+
+
+
+/* algemene styling p */
+p{
+    color: var(--tekst-kleur);
+}
+
+/* Styling pijljtje */
+.pijltje{
+    height: 30px;
+    margin: 1em;
+    transition: 1s ease;
+    cursor: pointer;
+}
+
+.omhoog{
+    transform: rotate(90deg);
+}
+
+.draai{
+    transform: rotate(-90deg);
+    
+}
+
+
+summary{
+    list-style: "⤵️ ";
+    margin:1em;
+}
+
+details[open] summary{
+    list-style: "⤴️ ";
+}
+
+.invisible{
+    display: none !important;
+}
+
+.pop-over{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--prim-color);
+    color: var(--witte-kleur);
+    text-align: center;
+    font-size: 1.2em;
+    transition: 1s ease;
+}
+.low{
+    transform: translateY(82%);
+}
+
+.up{
+    transform: translateY(0%);
+}
+
+.pauze, .start{
+    width: 100px;
+    height: 100px;
+    margin-top:1em;
+}
+
+.opvulling{
+    height: 75px;
+}
+
+
+/*/*/ /* Javascript classes */ /*/*/
+.hartvul{
+    animation: vullen 2s linear forwards;
+}
+
+
+@keyframes vullen {
+    0% {
+        stroke-dashoffset: 0;
+        
+    }
+    60%{
+        stroke-dashoffset: 250;
+        stroke-dasharray: 250;
+    }
+    80%{
+        fill: transparent;
+    }
+    100%{
+        fill:var(--prim-color);
+        stroke-dashoffset: 250;
+        stroke-dasharray: 250;
+    }
+}
+
+.pulse{
+    animation: pulses 1s ease infinite;
+}
+
+@keyframes pulses {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}
+
+
+/*/*/ /* Pointer op de kaart die springt */ /*/*/
+@keyframes bounce {
+    0% {
+        top:50%;
+        transform: rotate(0deg);
+    }
+
+    50% {
+        top: 47.5%;
+    }
+
+    100%{
+        top: 50%;
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Tegen irritaties // Verwijderen wanneer klaar */
+.flesknopIcon{
+    height: 10px;
+}
+
+/* body > header > nav img{
+    width: 24px;
+    height:24px;
+} */
+
+.icon{
+    width: 24px;
+    height: 24px;
+}
+
+/* /-=-=-=-/ */
+
+.overlay{
+    position: fixed;
+    top: -20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    background:linear-gradient(180deg, rgba(0,0,0,0.4) 0%, black 100%);
+    
+    
+}
+
+.overlay > section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--prim-color);
+    border-radius: 50%;
+    width:15em;
+    height: 15em;
+}
+
+.overlay h2{
+    font-weight: 900;
+}
+
+.overlay p:last-of-type{
+    padding:1em 0 0 0;
+    font-size: 1.1em;
+    font-weight: 900;
+    border-bottom: 4px solid var(--tekst-kleur);
+    cursor: pointer;
+}
+
+input[type="checkbox"]{
+    margin:1em;
+    height: 30px;
+    width: 30px;
+}
+
+blockquote{
+    font-size: 15px;
+    text-align: center;
+}
